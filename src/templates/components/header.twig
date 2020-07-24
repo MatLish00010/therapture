@@ -1,0 +1,56 @@
+{% if not args %}
+    {% set args = {
+        navList :
+        [
+            {
+                link : '#',
+                content: 'Features',
+            },
+            {
+                link : '#',
+                content: 'Pricing',
+            },
+            {
+                link : '#',
+                content: 'Blog',
+            },
+            {
+                link : '#',
+                content: 'More',
+            },
+        ],
+
+        btn :
+        [
+            {
+                mod: 'el-btn el-btn--white',
+                text: 'get started',
+            },
+            {
+                mod: 'el-btn el-btn--white',
+                text: 'get started',
+            },
+        ],
+    } %}
+{% endif %}
+<header class="header">
+    <div class="header__container">
+        <h1 class="header__logo">
+            <a href="/">
+                The <em>Rapture</em> Startup
+            </a>
+        </h1>
+        <nav class="header__nav">
+            {% for item in args.navList %}
+                <li class="header__nav-item">
+                    <a href="{{ item.link }}" class="header__nav-link">{{ item.content }}</a>
+                </li>
+            {% endfor %}
+        </nav>
+        <div class="header__log">
+            {% for item in args.btn %}
+                <button class="header__btn {{ item.mod }}">{{ item.text }}</button>
+            {% endfor %}
+        </div>
+    </div>
+</header>
