@@ -12,7 +12,6 @@
 @import "__mixins";
 
 // Libraries
-@import "libraries/slick";
 
 // Base
 @import "base/reset";
@@ -30,4 +29,5 @@
 // Sections
 @import "sections/section";
 @import "sections/hero";
+@import "sections/sub-header";
 @import "__utilities";

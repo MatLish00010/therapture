@@ -18,7 +18,7 @@
 
     &:hover {
       background-color: transparent;
-      border-color: $c-black;
+      border-color: transparent;
       color: $c-white;
     }
   }
@@ -60,5 +60,20 @@
       top: 0;
       transform: translate(-27% , 65%);
     }
+  }
+
+  &.black {
+    background-color: $c-black;
+    color: $c-white;
+    border: none;
+    transition: 0.4s;
+
+    &:hover {
+      background-color: $c-white;
+      color: $c-black;
+    }
+  }
+
+  &.search {
   }
 }

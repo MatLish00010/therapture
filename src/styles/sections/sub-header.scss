@@ -1,0 +1,61 @@
+.sub-header {
+  padding: 1.5rem 0;
+  border-bottom: 0.1rem solid $c-gray;
+  margin-bottom: 10rem;
+
+  &__container {
+    @extend .container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__nav {
+    display: flex;
+    list-style-type: none;
+  }
+
+  &__item {
+    margin: 0 0.75rem;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &-link {
+      text-decoration: none;
+      color: $c-black;
+      padding: 0.5rem;
+      transition: 0.4s;
+      border-radius: 1rem;
+
+      &:hover {
+        background-color: $c-black;
+        color: $c-white;
+      }
+    }
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+
+    &-text {
+      margin-right: 1rem;
+      font-weight: bold;
+    }
+
+    &-form {
+      border: 0.1rem solid $c-gray;
+      border-radius: 1.3rem;
+      padding: 0.4rem 0.8rem 0.45rem;
+      display: flex;
+      align-items: center;
+    }
+
+    &-input {
+      border: none;
+      padding: 0.5rem;
+    }
+  }
+}

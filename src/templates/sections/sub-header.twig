@@ -1,0 +1,53 @@
+{% if not args %}
+    {% set args = {
+        nav :
+        [
+            {
+                linkHref: '#',
+                linkText: 'About'
+            },
+            {
+                linkHref: '#',
+                linkText: 'Testimonials'
+            },
+            {
+                linkHref: '#',
+                linkText: 'Customers'
+            },
+            {
+                linkHref: '#',
+                linkText: 'Contact'
+            },
+
+        ],
+        serachText: 'Stay In Touch',
+        btnSearchText: 'submit',
+        btnColor: 'black',
+        btnMod: 'search',
+        btnType: 'submit',
+        btnText: 'submit',
+
+    } %}
+{% endif %}
+<section class="sub-header">
+    <div class="sub-header__container">
+        <ul class="sub-header__nav">
+            {% for item in args.nav %}
+                <li class="sub-header__item">
+                    <a href="{{ item.linkHref }}" class="sub-header__item-link">{{ item.linkText }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+        <div class="sub-header__search">
+            <p class="sub-header__search-text">{{ args.serachText }}</p>
+            <form class="sub-header__search-form" method="get">
+                <label for="search">
+                    <input type="search" class="sub-header__search-input" id="search"
+                           name="search" placeholder="Subscribe our newsletters">
+                    {% include "../elements/btn.twig" with {btnColor: args.btnColor, mod: args.btnMod,
+                        type: args.btnType, btnText: args.btnText } %}
+                </label>
+            </form>
+        </div>
+    </div>
+</section>
