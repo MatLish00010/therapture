@@ -15,6 +15,11 @@
 
   &__logo {
     margin-right: 2.44rem;
+    transition: 0.4s;
+
+    &:hover {
+      opacity: 0.5;
+    }
   }
 
   &__nav {
@@ -34,6 +39,11 @@
       font-size: 1rem;
       text-decoration: none;
       color: $c-nav;
+      transition: 0.3s;
+
+      &:hover {
+        color: $c-white;
+      }
     }
   }
 }

@@ -560,7 +560,12 @@ img {
         -ms-flex-align: center;
             align-items: center; }
   .header__logo {
-    margin-right: 2.44rem; }
+    margin-right: 2.44rem;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s; }
+    .header__logo:hover {
+      opacity: 0.5; }
   .header__nav {
     display: -webkit-box;
     display: -webkit-flex;
@@ -575,7 +580,12 @@ img {
       padding: 0.5rem;
       font-size: 1rem;
       text-decoration: none;
-      color: #6e6e6f; }
+      color: #6e6e6f;
+      -webkit-transition: 0.3s;
+      -o-transition: 0.3s;
+      transition: 0.3s; }
+      .header__nav-link:hover {
+        color: #FFFFFF; }
 
 .visible {
   visibility: visible !important; }
