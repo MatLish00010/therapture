@@ -1,0 +1,37 @@
+.el-btn {
+  text-transform: uppercase;
+  font-size: 0.69rem;
+  padding: 0.9em 2em;
+  border-radius: 1rem;
+  font-weight: bold;
+  margin-right: 1.31rem;
+  transition: 0.4s;
+  border: 0.2rem solid;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &.white {
+    background-color: $c-white;
+    border-color: $c-white;
+
+    &:hover {
+      background-color: $c-black;
+      border-color: $c-black;
+      color: $c-white;
+    }
+  }
+
+  &.transparent {
+    background-color: transparent;
+    border-color: $c-border-btn-gray;
+    color: $c-white;
+
+    &:hover {
+      background-color: $c-white;
+      border-color: $c-white;
+      color: $c-black;
+    }
+  }
+}

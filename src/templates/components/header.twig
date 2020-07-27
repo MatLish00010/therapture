@@ -23,33 +23,35 @@
         btn :
         [
             {
-                mod: 'el-btn el-btn--white',
-                text: 'get started',
+                btnColor: 'transparent',
+                btnText: 'login',
             },
             {
-                mod: 'el-btn el-btn--white',
-                text: 'get started',
+                btnColor: 'white',
+                btnText: 'get started',
             },
         ],
     } %}
 {% endif %}
 <header class="header">
     <div class="header__container">
-        <h1 class="header__logo">
-            <a href="/">
-                The <em>Rapture</em> Startup
-            </a>
-        </h1>
-        <nav class="header__nav">
-            {% for item in args.navList %}
-                <li class="header__nav-item">
-                    <a href="{{ item.link }}" class="header__nav-link">{{ item.content }}</a>
-                </li>
-            {% endfor %}
-        </nav>
+        <div class="header__wrapper">
+            <h1 class="header__logo">
+                <a href="/" class="header__logo-link">
+                    <img src="../../images/logo.png" alt="The Rapture Startup">
+                </a>
+            </h1>
+            <nav class="header__nav">
+                {% for item in args.navList %}
+                    <li class="header__nav-item">
+                        <a href="{{ item.link }}" class="header__nav-link">{{ item.content }}</a>
+                    </li>
+                {% endfor %}
+            </nav>
+        </div>
         <div class="header__log">
             {% for item in args.btn %}
-                <button class="header__btn {{ item.mod }}">{{ item.text }}</button>
+                {% include "../elements/btn.twig" with { btnColor: item.btnColor, btnText: item.btnText  } %}
             {% endfor %}
         </div>
     </div>
