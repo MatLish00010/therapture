@@ -1,0 +1,26 @@
+{% if not args %}
+    {% set args = {
+        title:'Every Great Business  Starts with an Idea',
+        btnColor: 'white',
+        btnText: 'Start your Absolutely free trial',
+        linkHref: '#',
+        linkContent: 'Already have a Rapture store?',
+        subTitle : 'The Rapture Startup is the one platform you need to build the business youve always dreamed of.',
+        modBtn : 'mouse',
+        backgroundImage: 'images/heroBG.jpg',
+    } %}
+{% endif %}
+
+<section class="hero" style="background-image: url({{ args.backgroundImage }})">
+    <div class="hero__container">
+        <h2 class="hero__title">
+            {{ args.title }}
+        </h2>
+        {% include '../elements/btn.twig' with {btnColor: args.btnColor, btnText: args.btnText} %}
+        <a href="{{ args.linkHref }}" class="header__link">{{ args.linkContent }}</a>
+        <h3 class="hero__title-sub">
+            {{ args.subTitle }}
+        </h3>
+        {% include '../elements/btn.twig' with {mod: args.modBtn} %}
+    </div>
+</section>
