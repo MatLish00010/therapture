@@ -16,8 +16,10 @@
         <h2 class="hero__title">
             {{ args.title }}
         </h2>
-        {% include '../elements/btn.twig' with {btnColor: args.btnColor, btnText: args.btnText} %}
-        <a href="{{ args.linkHref }}" class="header__link">{{ args.linkContent }}</a>
+        <div class="hero__btn">
+            {% include '../elements/btn.twig' with {btnColor: args.btnColor, btnText: args.btnText} %}
+        </div>
+        <a href="{{ args.linkHref }}" class="hero__link">{{ args.linkContent }}</a>
         <h3 class="hero__title-sub">
             {{ args.subTitle }}
         </h3>

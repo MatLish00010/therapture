@@ -1,6 +1,5 @@
 .header {
-  background-color: black;
-
+  margin-bottom: -4rem;
   &__container {
     @extend .container;
     display: flex;
@@ -38,7 +37,7 @@
       padding: 0.5rem;
       font-size: 1rem;
       text-decoration: none;
-      color: $c-nav;
+      color: $c-gray;
       transition: 0.3s;
 
       &:hover {
