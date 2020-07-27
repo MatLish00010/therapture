@@ -636,7 +636,8 @@ img {
     -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
-            align-items: center; }
+            align-items: center;
+    margin-top: 6rem; }
   .hero__title {
     color: #FFFFFF;
     font-size: 3.875rem;
@@ -654,7 +655,12 @@ img {
     margin-bottom: 1.93rem; }
   .hero__link {
     color: #6e6e6f;
-    margin-bottom: 5.375rem; }
+    margin-bottom: 5.375rem;
+    -webkit-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s; }
+    .hero__link:hover {
+      color: #FFFFFF; }
 
 .visible {
   visibility: visible !important; }
